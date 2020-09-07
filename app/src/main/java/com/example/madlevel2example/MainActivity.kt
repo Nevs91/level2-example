@@ -9,7 +9,6 @@ import com.example.madlevel2example.adapters.ReminderAdapter
 import com.example.madlevel2example.classes.Reminder
 import com.example.madlevel2example.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             reminderAdapter.notifyDataSetChanged()
             binding.etReminder.text?.clear()
         } else {
-            Snackbar.make(etReminder, "You must fill in the input field!", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.etReminder, "You must fill in the input field!", Snackbar.LENGTH_SHORT).show()
         }
     }
 }
