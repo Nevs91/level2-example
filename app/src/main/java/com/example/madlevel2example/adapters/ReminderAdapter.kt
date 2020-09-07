@@ -11,8 +11,7 @@ import com.example.madlevel2example.databinding.ItemReminderBinding
 class ReminderAdapter(private val reminders: List<Reminder>) : RecyclerView.Adapter<ReminderAdapter.ViewHolder>(){
 
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ItemReminderBinding.bind(itemView)
 
         fun databind(reminder: Reminder) {

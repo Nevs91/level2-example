@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
             reminders.add(Reminder(reminder))
             reminderAdapter.notifyDataSetChanged()
             binding.etReminder.text?.clear()
+            Snackbar.make(binding.btnAddReminder, "Reminder added!", Snackbar.LENGTH_SHORT).show()
         } else {
             Snackbar.make(binding.etReminder, "You must fill in the input field!", Snackbar.LENGTH_SHORT).show()
         }
@@ -82,6 +83,7 @@ class MainActivity : AppCompatActivity() {
                 val position = viewHolder.adapterPosition
                 reminders.removeAt(position)
                 reminderAdapter.notifyDataSetChanged()
+                Snackbar.make(binding.btnAddReminder, "Reminder removed!", Snackbar.LENGTH_SHORT).show()
             }
         }
 
